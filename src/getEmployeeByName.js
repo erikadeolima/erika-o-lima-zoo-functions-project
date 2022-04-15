@@ -1,5 +1,5 @@
-const { employees } = require("../data/zoo_data");
-const data = require("../data/zoo_data");
+const { employees } = require('../data/zoo_data');
+const data = require('../data/zoo_data');
 
 function getEmployeeByName(employeeName) {
   if (employeeName === undefined) {
@@ -7,7 +7,7 @@ function getEmployeeByName(employeeName) {
   }
   return employees.find(
     (employee) =>
-      employee.firstName === employeeName || employee.lastName === employeeName
+      employee.firstName === employeeName || employee.lastName === employeeName,
   );
 }
 
