@@ -3,11 +3,10 @@ const data = require('../data/zoo_data');
 function countAnimals(animal) {
   // seu código aqui
   if (animal === undefined) {
-    const especies = data.species.reduce((acc, especie) => {
+    return data.species.reduce((acc, especie) => {
       acc[especie.name] = especie.residents.length;
       return acc;
     }, {});
-    return especies;
   }
   if (Object.keys(animal).length === 1) {
     const meuAnimal = data.species.find((obj) => obj.name === animal.specie);
